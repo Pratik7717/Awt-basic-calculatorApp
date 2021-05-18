@@ -71,7 +71,37 @@ public class Calculator implements ActionListener {
 			tans.setText(Integer.toString(ans));
 		}
 		
+		if(e.getSource()==btnsub) {
+			int n1=Integer.parseInt(tno1.getText());
+			int n2=Integer.parseInt(tno2.getText());
+			
+			int ans=n1-n2;
+			tans.setText(Integer.toString(ans));
+		}
+		
+		if(e.getSource()==btnmult) {
+			int n1=Integer.parseInt(tno1.getText());
+			int n2=Integer.parseInt(tno2.getText());
+			
+			int ans=n1*n2;
+			tans.setText(Integer.toString(ans));
+		}
+		
+		if(e.getSource()==btndiv) {
+			int n1=Integer.parseInt(tno1.getText());
+			int n2=Integer.parseInt(tno2.getText());
+			
+			double ans=(double)n1/(double)n2;
+			tans.setText(Double.toString(ans));
+		}
+		
 		if(e.getSource()==btnreset) {
+			tno1.setText("");
+			tno2.setText("");
+			tans.setText("");
+		}
+		
+		if(e.getSource()==btnexit) {
 			System.exit(0);
 		}
 		
