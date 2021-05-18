@@ -1,9 +1,11 @@
 package com.main;
 
+import com.calculator.Calculator;
+
 public class AppMain {
 
 	public static void main(String[] args) {
-		System.out.println("Hello world!!");
+		Calculator c=new Calculator();
 	}
 
 }
