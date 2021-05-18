@@ -53,12 +53,27 @@ public class Calculator implements ActionListener {
 		pnl.add(btnreset);
 		pnl.add(btnexit);
 		
-		
+		btnadd.addActionListener(this);
+		btnsub.addActionListener(this);
+		btnmult.addActionListener(this);
+		btndiv.addActionListener(this);
+		btnreset.addActionListener(this);
+		btnexit.addActionListener(this);
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent arg0) {
-		// TODO Auto-generated method stub
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource()==btnadd) {
+			int n1=Integer.parseInt(tno1.getText());
+			int n2=Integer.parseInt(tno2.getText());
+			
+			int ans=n1+n2;
+			tans.setText(Integer.toString(ans));
+		}
+		
+		if(e.getSource()==btnreset) {
+			System.exit(0);
+		}
 		
 	}
 }
